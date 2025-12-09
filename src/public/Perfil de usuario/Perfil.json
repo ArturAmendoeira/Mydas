@@ -1,0 +1,14 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "email": "joao@example.com",
+      "telefone": "",
+      "idade": 30,
+      "renda": 3500,
+      "profissao": "Desenvolvedor",
+      "perfil": "moderado"
+    }
+  ]
+}

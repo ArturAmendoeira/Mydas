@@ -1,0 +1,56 @@
+{
+
+  "name": "template-tiaw",
+
+  "version": "1.0.0",
+
+  "description": "Preparação para a sprint 2 Tiaw",
+
+  "main": "index.js",
+
+  "scripts": {
+
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "start": "json-server --watch ./db/db.json"
+
+  },
+
+  "dependencies": {
+
+    "json-server": "^0.17.0",
+
+    "jsonserver": "^0.1.6"
+
+  },
+
+  "keywords": [],
+
+  "author": "",
+
+  "license": "ISC",
+
+  "directories": {
+
+    "doc": "docs"
+
+  },
+
+  "repository": {
+
+    "type": "git",
+
+    "url": "git+https://github.com/ICEI-PUCMinas-PSG-SI-TI/icei-pucminas-psg-si-n-2025-2-tiaw-g4-edu-financeira.git"
+
+  },
+
+  "bugs": {
+
+    "url": "https://github.com/ICEI-PUCMinas-PSG-SI-TI/icei-pucminas-psg-si-n-2025-2-tiaw-g4-edu-financeira/issues"
+
+  },
+
+  "homepage": "https://github.com/ICEI-PUCMinas-PSG-SI-TI/icei-pucminas-psg-si-n-2025-2-tiaw-g4-edu-financeira#readme"
+
+}
+

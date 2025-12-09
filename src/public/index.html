@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="./assets/css/home.css">
+    <!-- JS geral do projeto -->
+    <script src="./assets/scripts/home.js"></script>
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/b9abb5ca18.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Booststrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Mydas - Home Page</title>
+</head>
+
+<body>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const login = checkIfLogged();
+            if (!login) {
+                window.location.href = "login/login.html";
+            }
+        });
+    </script>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-btn">
+        <i class="fa-solid fa-bars fa-lg"></i>
+    </label>
+    <label for="menu-toggle" class="overlay"></label> <!-- Overlay para fechar o menu -->
+    <div class="dashboard">
+        <aside class="barra-lateral">
+            <div class="user-profile">
+                <img src="https://picsum.photos/id/50/50" class="avatar">
+                <div>
+                    <p id="welcome">Bem-vindo,</p>
+                    <p id="user">Usuário</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-menu-style">
+                    <li class="nav-item-style">
+                        <a href="index.html" class="nav-link-style" id="active-item">
+                            <i class="fas fa-regular fa-house"></i>
+                            <span>HomePage</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-style">
+                        <a href="biblioteca.html" class="nav-link-style">
+                           <i class="fas fa-regular fa-video"></i>
+                            <span>Biblioteca</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-style">
+                        <a href="gastos.html" class="nav-link-style">
+                            <i class="fas fa-user"></i>
+                            <span>Gastos</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-style">
+                        <a href="metas.html" class="nav-link-style">
+                            <i class="fas fa-book"></i>
+                            <span>Metas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-style">
+                        <a href="calculadoraJuros.html" class="nav-link-style">
+                            <i class="fas fa-regular fa-calculator"></i>
+                            <span>Calculadora de Juros</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-style">
+                        <a href="calculadoraMetas.html" class="nav-link-style">
+                            <i class="fas fa-regular fa-calculator"></i>
+                            <span>Calculadora de Metas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item-style">
+                        <a href="sobrenos.html" class="nav-link-style">
+                            <i class="fas fa-regular fa-calendar"></i>
+                            <span>Sobre nós</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="separator"></div>
+
+            <a href="/config.html" class="nav-link-style">
+                <i class="fas fa-regular fa-gear"></i>
+                <span>Configurações</span>
+            </a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h2>Mydas</h2>
+            </header>
+            <div class="separator"></div>
+            <div class="content-wrapper">
+                <div class="row justify-content-center">
+                    <div class="col">
+                    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="logo">Mydas</div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero">Home</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#sobre">Sobre</a>
+        <button class="btn-outline" id="btnCreateTop">Crie sua conta</button>
+        <button class="btn-ghost" id="btnLoginTop">Entrar</button>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-left">
+        <h1>Domine Suas Finanças Pessoais</h1>
+        <p>
+          Nossa plataforma oferece a educação financeira que você precisa — do básico às estratégias de investimento.
+        </p>
+
+        
+
+        
+
+      <div class="hero-right">
+        <!-- usa a imagem que você subiu -->
+        
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS / CARDS -->
+    <section class="beneficios" id="beneficios">
+      <h2>Tudo que você precisa para ter sucesso financeiro</h2>
+      <p class="sub">Abordagem completa para educação financeira — desde o básico até investimentos.</p>
+
+      <div class="cards">
+        <article class="card" tabindex="0">
+          <div class="card-icon">👤</div>
+          <h3>Perfil de Usuário</h3>
+          <p>Controle metas e veja progresso ao longo do tempo.</p>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div class="card-icon">📚</div>
+          <h3>Biblioteca de Conteúdos</h3>
+          <p>Artigos, cursos e guias práticos.</p>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div class="card-icon">📈</div>
+          <h3>Acompanhamento de Gastos</h3>
+          <p>Visualize suas despesas e economias.</p>
+        </article>
+
+        <article class="card" tabindex="0">
+          <div class="card-icon">🧮</div>
+          <h3>Calculadora de Juros</h3>
+          <p>Entenda como seu dinheiro cresce com o tempo.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE + imagem da paleta -->
+    <section class="sobre" id="sobre">
+      <div class="sobre-left">
+        <h2>Sobre o Mydas</h2>
+        <p>
+          Somos uma plataforma minimalista, focada em clareza e usabilidade para ajudar você a organizar e multiplicar seu patrimônio.
+        </p>
+      </div>
+
+      <div class="sobre-right">
+        <!-- paleta de cores (imagem enviada) -->
+        
+      </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <div>
+        <strong>Mydas</strong>
+        <p>Cada escolha financeira vale ouro.</p>
+      </div>
+      <div class="footer-actions">
+        
+      </div>
+    </footer>
+  </main>
+
+  <!-- MODAL: Entrar / Criar -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+
+      <h3 id="modalTitle">Entrar</h3>
+      <form id="authForm">
+        <label>
+          Email
+          <input type="email" id="email" required />
+        </label>
+
+        <label>
+          Senha
+          <input type="password" id="password" required minlength="4" />
+        </label>
+
+        <div class="modal-actions">
+          <button type="submit" class="btn-primary">Entrar</button>
+          <button type="button" class="btn-outline" id="switchToCreate">Criar conta</button>
+        </div>
+
+        <p class="auth-feedback" id="authFeedback" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <h5 class="fw-bold">Mydas</h5>
+        <p class="mb-0">mydas@gmail.com.br | 9999-9999</p>
+        <p class="mb-0">Minas Gerais, MG - Brasil</p>
+    </footer>
+</body>
+
+</html>

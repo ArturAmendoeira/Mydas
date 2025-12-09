@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+:root {
+  --primaria: #065F46;
+  --secundaria: #374151;
+  --destaque: #A7F3D0;
+  --fundo: #F3F4F6;
+  --texto-principal: #1F2937;
+  --texto-secundario: #9CA3AF;
+}
+
+body {
+  background: var(--fundo);
+  color: var(--texto-principal);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primaria);
+}
+
+h2,
+h3 {
+  margin-bottom: 15px;
+  color: var(--secundaria);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin: 8px 0 5px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--texto-secundario);
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px;
+  background: var(--primaria);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #084f3d;
+}
+
+.tabela-container {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: var(--secundaria);
+  color: white;
+}
+
+th,
+td {
+  padding: 12px 10px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--fundo);
+}
+
+tbody tr:hover {
+  background-color: var(--destaque);
+}
+
+td:last-child {
+  font-weight: bold;
+  color: var(--primaria);
+}
+
+.grafico-container {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .grafico-container {
+    height: 250px;
+  }
+
+  .filtros {
+    flex-direction: column;
+  }
+}
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+}
+/*Declarações iniciais - Fim*/
+
+p#welcome {
+    font-size: 0.875rem;
+    color:#6b7280;
+}
+
+p#user {
+    font-weight: 500;
+}
+/*Botão Menu Toggle Mobile - Início*/
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/*Botão Menu Toggle Mobile - Fim*/
+
+/* Barra lateral (aside) - Início */
+.barra-lateral {
+    width: 16rem;
+    background: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navegação lateral */
+
+.nav-menu-style {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.nav-item-style {
+    margin-bottom: 0.5rem;
+}
+
+.nav-link-style {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #6b7280;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.nav-link-style:hover {
+    background: #f3f4f6;
+}
+
+.nav-link-style#active-item {
+    background: #effff5;
+    color: #047857;
+    border-color: #bffec4;
+}
+
+/* Barra lateral (aside) - Fim */
+
+.separator {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 1.5rem 0;
+}
+
+/* Main Content - Início */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+/*Footer*/
+footer {
+    background-color: #374151;
+    color: #f3f4f6;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+
+/* Overlay para mobile */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .barra-lateral {
+        position: fixed;
+        top: 0;
+        left: -17.5rem;
+        height: 100vh;
+        z-index: 999;
+        width: 17.5rem;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu-toggle:checked~.dashboard .barra-lateral {
+        left: 0;
+    }
+
+    #menu-toggle:checked~.menu-btn {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 4.5rem 1rem 1rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .overlay {
+        display: block;
+    }
+
+    #menu-toggle:checked~.overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+    .barra-lateral {
+        width: 14rem;
+    }
+}

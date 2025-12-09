@@ -1,0 +1,357 @@
+/*Declarações iniciais - Início*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #f9fafb;
+    color: #111827;
+    line-height: 1.5;
+}
+
+/* Layout Principal */
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+}
+
+/*Declarações iniciais - Fim*/
+
+p#welcome {
+    font-size: 0.875rem;
+    color:#6b7280;
+}
+
+p#user {
+    font-weight: 500;
+}
+
+/*Botão Menu Toggle Mobile - Início*/
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/*Botão Menu Toggle Mobile - Fim*/
+
+/* Barra lateral (aside) - Início */
+.barra-lateral {
+    width: 16rem;
+    background: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navegação lateral */
+
+.nav-menu-style {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.nav-item-style {
+    margin-bottom: 0.5rem;
+}
+
+.nav-link-style {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #6b7280;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.nav-link-style:hover {
+    background: #f3f4f6;
+}
+
+.nav-link-style#active-item {
+    background: #effff5;
+    color: #047857;
+    border-color: #bffec4;
+}
+
+/* Barra lateral (aside) - Fim */
+
+.separator {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 1.5rem 0;
+}
+
+/* Main Content - Início */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.content-wrapper {
+    max-width: 72rem;
+    margin: 0 auto;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Footer*/
+footer {
+    background-color: #374151;
+    color: #f3f4f6;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Responsividade */
+
+/* Overlay para mobile */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .barra-lateral {
+        position: fixed;
+        top: 0;
+        left: -17.5rem;
+        height: 100vh;
+        z-index: 999;
+        width: 17.5rem;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu-toggle:checked~.dashboard .barra-lateral {
+        left: 0;
+    }
+
+    #menu-toggle:checked~.menu-btn {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 4.5rem 1rem 1rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .overlay {
+        display: block;
+    }
+
+    #menu-toggle:checked~.overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+    .barra-lateral {
+        width: 14rem;
+    }
+}
+
+body {
+  background-color: #F3F4F6;
+  color: #1F2937;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #FFFFFF;
+  border: 1px solid #9CA3AF;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(6, 95, 70, 0.2);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #065F46;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  color: #F3F4F6;
+}
+
+.avatar {
+  background: #A7F3D0;
+  color: #065F46;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info h1 {
+  margin: 0;
+  color: #F3F4F6;
+}
+
+.info p {
+  color: #D1D5DB;
+  margin: 4px 0 0 0;
+}
+
+.buttons button {
+  margin-left: 10px;
+  background: none;
+  border: 1px solid #A7F3D0;
+  color: #A7F3D0;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+  background: #A7F3D0;
+  color: #065F46;
+}
+
+.buttons button.gold {
+  background: #065F46;
+  color: #F3F4F6;
+}
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.profile-form label {
+  grid-column: span 2;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.profile-form input[type=text],
+.profile-form input[type=email],
+.profile-form input[type=number] {
+  background: #F3F4F6;
+  border: 1px solid #9CA3AF;
+  border-radius: 8px;
+  padding: 10px;
+  color: #1F2937;
+  width: 100%;
+}
+
+.profile-form input:focus {
+  outline: 2px solid #A7F3D0;
+}
+
+.perfil-investidor {
+  grid-column: span 2;
+  display: flex;
+  gap: 15px;
+  color: #374151;
+}
+
+.form-actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-actions button {
+  background: #065F46;
+  color: #F3F4F6;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-actions button:hover {
+  background: #0A7B5C;
+}
+
+.resumo {
+  background: #E5E7EB;
+  border-top: 1px solid #9CA3AF;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.resumo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  color: #1F2937;
+}
+
+.gold {
+  background: #A7F3D0 !important;
+  color: #065F46 !important;
+}

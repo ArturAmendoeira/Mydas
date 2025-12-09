@@ -1,0 +1,504 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #F3F4F6;
+    color: #1F2937;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.main{
+        display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #F3F4F6;
+    color: #1F2937;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #065F46;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #1F2937;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #1F2937;
+    font-style: italic;
+    font-family: 'Inter', sans-serif;
+}
+
+.title-box {
+    background-color: #A7F3D0;
+    border-radius: 50px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px;
+    color: #065F46;
+    font-weight: bold;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.meta {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progresContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.progress-container {
+    background-color: #E5E7EB;
+    z-index: 2;
+    border-radius: 20px;
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #A7F3D0, #22C55E);
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 8px;
+    color: #065F46;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.progress-text {
+    font-weight: bold;
+    color: #065F46;
+    margin: 0;
+}
+
+.extendButton,
+.addMetaButton {
+    background-color: #065F46;
+    color: #F3F4F6;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.extendButton:hover,
+.addMetaButton:hover {
+    background-color: #047857;
+}
+
+.removeMetaButton {
+    background-color: #a70000;
+    color: #F3F4F6;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.removeMetaButton:hover {
+    background-color: red;
+}
+
+.newGoal,
+.removeGoal {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#mModaletaForm input,
+#metaFormModal textarea {
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: #1F2937;
+    background-color: #F3F4F6;
+}
+
+#metaFormModal .bg-white {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 20px;
+    width: 360px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#metaFormModal input::placeholder,
+#metaFormModal textarea::placeholder {
+    color: #9CA3AF;
+}
+
+@media (max-width: 768px) {
+    .meta {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .title-box {
+        width: 100%;
+    }
+
+    .extendButton,
+    .addMetaButton,
+    .removeMetaButton {
+        width: 100%;
+    }
+}
+
+header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid #E5E7EB;
+    z-index: 0;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #065F46
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1F2937;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #065F46;
+}
+
+.icon i {
+    font-size: 1.5rem;
+    color: #065F46;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon i:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    width: full;
+    background-color: #374151;
+    color: #F3F4F6;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: auto;
+    z-index: 1;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    color: #A7F3D0;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    color: #F3F4F6;
+}
+
+.footer-info p i {
+    margin-right: 8px;
+    color: #A7F3D0;
+}
+/* Layout Principal */
+.dashboard {
+    min-height: 100vh;
+    display: flex;
+}
+
+/*Declarações iniciais - Fim*/
+
+p#welcome {
+    font-size: 0.875rem;
+    color:#6b7280;
+}
+
+p#user {
+    font-weight: 500;
+}
+
+/*Botão Menu Toggle Mobile - Início*/
+#menu-toggle {
+    display: none;
+}
+
+.menu-btn {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/*Botão Menu Toggle Mobile - Fim*/
+
+/* Barra lateral (aside) - Início */
+.barra-lateral {
+    width: 16rem;
+    background: white;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Navegação lateral */
+
+.nav-menu-style {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.nav-item-style {
+    margin-bottom: 0.5rem;
+}
+
+.nav-link-style {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: #6b7280;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.nav-link-style:hover {
+    background: #f3f4f6;
+}
+
+.nav-link-style#active-item {
+    background: #effff5;
+    color: #047857;
+    border-color: #bffec4;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block;
+    }
+
+    .barra-lateral {
+        position: fixed;
+        top: 0;
+        left: -17.5rem;
+        height: 100vh;
+        z-index: 999;
+        width: 17.5rem;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu-toggle:checked~.dashboard .barra-lateral {
+        left: 0;
+    }
+
+    #menu-toggle:checked~.menu-btn {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 4.5rem 1rem 1rem;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .overlay {
+        display: block;
+    }
+
+    #menu-toggle:checked~.overlay {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+@media (min-width: 769px) and (max-width: 1279px) {
+    .barra-lateral {
+        width: 14rem;
+    }
+}
+
+.modalAdicionar,
+.modalEditar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    /* animação suave */
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+/* Estado escondido */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Caixa branca do modal */
+.modalAdicionar form,
+.modalEditar form {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 320px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Título */
+.modalAdicionar h2,
+.modalEditar h2 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+/* Inputs */
+.modalAdicionar input,
+.modalEditar input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* Botões */
+.modalAdicionar button,
+.modalEditar button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* Botão Salvar */
+.modalAdicionar button[type="submit"],
+.modalEditar button[type="submit"] {
+    background: #4CAF50;
+    color: white;
+}
+
+/* Botão Cancelar */
+.modalAdicionar button[type="button"],
+.modalEditar button[type="button"] {
+    background: #e0e0e0;
+}
